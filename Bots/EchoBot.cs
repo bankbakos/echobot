@@ -20,7 +20,7 @@ namespace Microsoft.BotBuilderSamples.Bots
 
         public static IMessageActivity CreateMessageActivityWChanneldata()
         {
-            string json = @"{'messageAudience': 'AGENTS_AND_MANAGER'}";
+            string json = @"{'messageAudience': 'AGENTS_AND_MANAGERS'}";
 
             JObject LPChannelData = JObject.Parse(json);
 
@@ -113,6 +113,7 @@ namespace Microsoft.BotBuilderSamples.Bots
             string json = @"{'channelData': {'messageAudience': 'AGENTS_AND_MANAGERS'}}";
 
             JObject LPChannelData = JObject.Parse(json);
+
             var asd = CreateMessageActivityWChanneldata();
             await turnContext.SendActivityAsync(asd);
             
