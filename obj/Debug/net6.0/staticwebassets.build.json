@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "s7m8lkEVBStQvA/FMT5pCxwq3Jht0ABi98zIZvic1Qk=",
+  "Hash": "rjztFnja/PCbNt83ZhiMLjmZgCxOFBXjeObB30YCbfM=",
   "Source": "EchoBot",
   "BasePath": "_content/EchoBot",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "EchoBot\\wwwroot",
       "Source": "EchoBot",
-      "ContentRoot": "C:\\Users\\bbakos2\\Downloads\\BotBuilder-Samples-main\\BotBuilder-Samples-main\\samples\\csharp_dotnetcore\\02.echo-bot\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bbakos2\\OneDrive - DXC Production\\Documents\\GitHub\\echobot\\wwwroot\\",
       "BasePath": "_content/EchoBot",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\bbakos2\\Downloads\\BotBuilder-Samples-main\\BotBuilder-Samples-main\\samples\\csharp_dotnetcore\\02.echo-bot\\wwwroot\\default.html",
+      "Identity": "C:\\Users\\bbakos2\\OneDrive - DXC Production\\Documents\\GitHub\\echobot\\wwwroot\\default.html",
       "SourceId": "EchoBot",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\bbakos2\\Downloads\\BotBuilder-Samples-main\\BotBuilder-Samples-main\\samples\\csharp_dotnetcore\\02.echo-bot\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\bbakos2\\OneDrive - DXC Production\\Documents\\GitHub\\echobot\\wwwroot\\",
       "BasePath": "_content/EchoBot",
       "RelativePath": "default.html",
       "AssetKind": "All",
