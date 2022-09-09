@@ -110,7 +110,7 @@ namespace Microsoft.BotBuilderSamples.Bots
             $"{Type}\n" +
             $"{Value}\n";
 
-            string json = @"{'channelData': {'messageAudience': 'AGENTS_AND_MANAGER'}}";
+            string json = @"{'channelData': {'messageAudience': 'AGENTS_AND_MANAGERS'}}";
 
             JObject LPChannelData = JObject.Parse(json);
             var asd = CreateMessageActivityWChanneldata();
