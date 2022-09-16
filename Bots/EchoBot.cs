@@ -114,7 +114,7 @@ namespace Microsoft.BotBuilderSamples.Bots
 
             JObject LPChannelData = JObject.Parse(json);
 
-            var asd = CreateMessageActivityWChanneldata();
+            var asd = CreateMessageActivityWChanneldata();  
             await turnContext.SendActivityAsync(asd);
             
 
