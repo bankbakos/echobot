@@ -4,35 +4,17 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection.Emit;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Connector;
 using Microsoft.Bot.Schema;
-using Newtonsoft.Json.Linq;
 
 namespace Microsoft.BotBuilderSamples.Bots
 {
     public class EchoBot : ActivityHandler
     {
-
-        public static IMessageActivity CreateMessageActivityWChanneldata()
-        {
-            string json = @"{'messageAudience': 'AGENTS_AND_MANAGERS'}";
-
-            JObject LPChannelData = JObject.Parse(json);
-
-            return new Activity(ActivityTypes.Message)
-            {
-                Attachments = new List<Attachment>(),
-                Entities = new List<Entity>(),
-                Text = "private massage",
-                ChannelData = LPChannelData,
-            };
-        }
-
         protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
         {
 
@@ -59,7 +41,7 @@ namespace Microsoft.BotBuilderSamples.Bots
             var LocalTimestamp = turnContext.Activity.LocalTimestamp;
             //var LocalTimezone = turnContext.Activity.LocalTimezone;
             var Locale = turnContext.Activity.Locale;
-            // var MembersAdded = turnContext.Activity.MembersAdded;
+           // var MembersAdded = turnContext.Activity.MembersAdded;
             //var MembersRemoved = turnContext.Activity.MembersRemoved;
             //var Name = turnContext.Activity.Name;
             //var Properties = turnContext.Activity.Properties;
@@ -82,40 +64,36 @@ namespace Microsoft.BotBuilderSamples.Bots
             var Value = turnContext.Activity.Value;
             //var ValueType = turnContext.Activity.ValueType;
 
-            var replyText = $"" +
-            $"TurnContext:\n " +
-            $"{AttachmentLayout}\n" +
-            $"{Attachments}\n" +
-            $"{ChannelData}\n" +
-            $"{ChannelId}\n" +
-            $"{Conversation}\n" +
-            $"{DeliveryMode}\n" +
-            $"{Entities}\n" +
-            $"{Expiration}\n" +
-            $"{From}\n" +
-            $"{Id}\n" +
-            $"{Importance}\n" +
-            $"{InputHint}\n" +
-            $"{LocalTimestamp}\n" +
-            $"{Locale}\n" +
-            $"{Recipient}\n" +
-            $"{ReplyToId}\n" +
-            $"{ServiceUrl}\n" +
-            $"{Speak}\n" +
-            $"{SuggestedActions}\n" +
-            $"{Summary}\n" +
-            $"{Text}\n" +
-            $"{TextFormat}\n" +
-            $"{Timestamp}\n" +
-            $"{Type}\n" +
-            $"{Value}\n";
+                var replyText = $"" +
+                $"TurnContext:\n " +
+                $"{AttachmentLayout}\n" +
+                $"{Attachments}\n" +
+                $"{ChannelData}\n" +
+                $"{ChannelId}\n" +
+                $"{Conversation}\n" +
+                $"{DeliveryMode}\n" +
+                $"{Entities}\n" +
+                $"{Expiration}\n" +
+                $"{From}\n" +
+                $"{Id}\n" +
+                $"{Importance}\n" +
+                $"{InputHint}\n" +
+                $"{LocalTimestamp}\n" +
+                $"{Locale}\n" +
+                $"{Recipient}\n" +
+                $"{ReplyToId}\n" +
+                $"{ServiceUrl}\n" +
+                $"{Speak}\n" +
+                $"{SuggestedActions}\n" +
+                $"{Summary}\n" +
+                $"{Text}\n" +
+                $"{TextFormat}\n" +
+                $"{Timestamp}\n" +
+                $"{Type}\n" +
+                $"{Value}\n";
 
-            string json = @"{'channelData': {'messageAudience': 'AGENTS_AND_MANAGERS'}}";
+                await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
 
-            JObject LPChannelData = JObject.Parse(json);
-
-            var asd = CreateMessageActivityWChanneldata();  
-            await turnContext.SendActivityAsync(asd);
             
 
 
