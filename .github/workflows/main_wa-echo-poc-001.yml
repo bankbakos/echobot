@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'wa-echo-poc-001'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7403C7220DF74051B1D8E5B49E5BE160 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C3A2A62AEFDC4E5398CE76BC50BC9495 }}
           package: .
